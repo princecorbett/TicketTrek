@@ -1,0 +1,11 @@
+ version: "4.33"
+ services:
+   app:
+     build: .
+     volumes:
+       - .:/CRM
+     ports:
+       - 8000:8000
+     image: application:CRM
+     container_name: app_container
+     command: gunicorn CRM.wsgi:application --bind 0.0.0.0:8000
