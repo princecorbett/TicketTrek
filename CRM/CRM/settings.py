@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['tickettrek.site']
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
