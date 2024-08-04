@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^bw2b$xxr=5yq2oqbu8e3n)4%wuxfmljc=z#s_j^4si3n$9#9o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tickettrek.site', 'www.tickettrek.site', 'localhost', '15.206.90.233']
 
