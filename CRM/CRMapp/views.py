@@ -9,6 +9,9 @@ from .models import Record
 
 from django.contrib import messages
 
+from django.http import HttpResponseForbidden
+from django.template.response import TemplateResponse
+
 #-- Homepage
 def home(request):
 
@@ -108,6 +111,9 @@ def user_logout(request):
     auth.logout(request)
     messages.success(request, "Logout success!")
     return redirect('my-login')
+
+def custom_csrf_failure(request, reason=""):
+    return TemplateResponse(request, 'csrf_failure.html', {'reason': reason})
 
 
 

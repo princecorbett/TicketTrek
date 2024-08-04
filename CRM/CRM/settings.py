@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^bw2b$xxr=5yq2oqbu8e3n)4%wuxfmljc=z#s_j^4si3n$9#9o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['tickettrek.site', 'www.tickettrek.site', 'localhost', '15.206.90.233']
 
@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['tickettrek.site']
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -43,6 +43,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://tickettrek.site']
+
+CSRF_FAILURE_VIEW = 'CRM.custom_csrf_failure'
 
 ROOT_URLCONF = 'CRM.urls'
 
