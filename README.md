@@ -4,9 +4,7 @@
 
 <b><h4> Welcome to TicketTrek, a powerful CRUD-based CRM app designed to enhance your customer support management. Built with Django, HTML, and CSS, TicketTrek provides a seamless experience for tracking, managing, and resolving customer tickets.</h4>
 
-Explore TicketTrek at: [http://tickettrek.site/](http://tickettrek.site:8000/)
-                  or : [http://tickettrek.site/](http://15.206.90.233:8000/)
-                  or :  [http://tickettrek.site/](http://tickettrek.site/)
+Explore TicketTrek at: [http://tickettrek.site/](http://tickettrek.site/)
                  
 
  <h2>Key Features</h2>
