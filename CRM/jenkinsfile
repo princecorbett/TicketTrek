@@ -17,7 +17,7 @@ pipeline {
         stage("docker compose"){
              steps{
                script {
-                    dir('/var/lib/jenkins/workspace/tickettrek-pipline/CRM'){
+                    dir('/var/lib/jenkins/workspace/pipleline-jenkins/CRM'){
                         sh 'echo apple123 | sudo -S --prompt="" docker-compose down'
                         sh 'echo apple123 | sudo -S --prompt="" docker-compose up -d'
                     }
