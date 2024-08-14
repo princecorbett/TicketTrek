@@ -18,8 +18,8 @@ pipeline {
              steps{
                script {
                     dir('/var/lib/jenkins/workspace/tickettrek-pipline/CRM'){
-                        sh 'echo "apple123" | sudo -S -p "" docker-compose down'
-                        sh 'echo "apple123" | sudo -S -p "" docker-compose up -d'
+                        sh 'echo apple123 | sudo -S --prompt="" docker-compose down'
+                        sh 'echo apple123 | sudo -S --prompt="" docker-compose up -d'
                     }
                     }
                 }
