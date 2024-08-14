@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages{
+        stage("Clone Code"){
+            steps{
+                echo "cloning the code"
+                git url: "https://github.com/princecorbett/TicketTrek.git", branch: "master"
+            }
+        }
+        stage("Build the code"){
+             steps{
+                echo "building the code"
+                sh 'echo apple123 | sudo -S --prompt="" docker build -t myapp -f CRM/Dockerfile ./CRM'
+            }
+        }
+        stage("docker compose"){
+             steps{
+               script {
+                    dir('/var/lib/jenkins/workspace/tickettrek-pipline/CRM'){
+                        sh 'echo "apple123" | sudo -S -p "" docker-compose down'
+                        sh 'echo "apple123" | sudo -S -p "" docker-compose up -d'
+                    }
+                    }
+                }
+            }
+        }
+    }
